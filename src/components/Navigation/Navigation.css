@@ -1,0 +1,140 @@
+.navigation__main-links{
+    display: flex;
+    gap: 30px;
+}
+
+.navigation__main-link{
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    font-style: normal;
+    margin: 29px 0;
+    text-decoration: none;
+    color: white;
+    transition: opacity .3s linear;
+}
+
+.navigation__main-link_colored{
+    color: black;
+    background-color: #3DDC84;
+    padding: 0;
+    border-radius: 3px;
+    width: 76px;
+    height: 32px;
+    margin: 21px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.navigation__profile-links{
+    display: flex;
+    gap: 16px;
+}
+
+.navigation__profile-link{
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    background-color: #202020;
+    margin: 28px 0;
+    color: white;
+    border: none;
+    transition: opacity .3s linear;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+}
+
+.navigation__profile-link_border {
+    font-size: 14px;
+    border: 2px solid rgba(170, 170, 170, .2);
+    border-radius: 50px;
+    padding: 5.5px 10.5px;
+    max-width: 96px;
+    max-height: 28px;
+    margin: 21px 0;
+    position: absolute;
+    right: 70px;
+}
+
+.navigation__profile-link_weight {
+    font-weight: 500;
+}
+
+.navigation__profile-link-icon {
+    padding-right: 7px;
+}
+
+.navigation__profile-button {
+    display: none;
+}
+
+.navigation__main-link:hover {
+    opacity: .5;
+}
+
+.navigation__profile-link:hover {
+    opacity: .5;
+}
+
+@media screen and (max-width: 880px){
+    .navigation__profile-link{
+        display: none;
+    }
+
+    .navigation__profile-menu {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+    }
+
+    .navigation__profile-button {
+        background-image: url(../../images/icon__menu-profile.svg);
+        border: none;
+        background-color: #202020;
+        display: block;
+        padding: 0;
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        transition: opacity .3s linear;
+    }
+
+    .navigation__profile-button:hover {
+        opacity: .3;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .navigation__profile-links{
+        gap: 14px;
+    }
+
+    .navigation__link_colored{
+        font-size: 10px;
+    }
+
+    .navigation__link{
+        font-size: 10px;
+        padding: 5px 12px;
+        width: 54px;
+        height: 26px;
+        margin: 24px 0;
+    }
+
+    .navigation__profile-menu {
+        right: 16px;
+        width: 40px;
+        height: 43px;
+    }
+
+    .navigation__profile-button {
+        padding: 0;
+        width: 40px;
+        height: 43px;
+    }
+}
