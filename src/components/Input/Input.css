@@ -1,0 +1,31 @@
+.input {
+    border-bottom: 1px solid #424242;
+    box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 22px;
+}
+
+.input__placeholder {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: normal;
+    color: #8B8B8B;
+    padding-bottom: 5px;
+}
+
+.input__text {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+    margin: 0;
+    background-color: #202020;
+    width: 100%;
+    color: white;
+    height: 17px;
+    padding-bottom: 10px;
+    outline: none;
+}
