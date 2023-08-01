@@ -19,14 +19,14 @@ function Navigation(props) {
     return(
         <section className='navigation'>
             {props.isMainPage 
-                ? <nav className='navigation__main-links'>
-                    <Link className='navigation__main-link' to='/signup'>Регистрация</Link>
-                    <Link className='navigation__main-link navigation__main-link_colored' to='/signin'>Войти</Link>
-                  </nav>
+                ? <ul className='navigation__main-links'>
+                    <li className='navigation__item navigation__item_grow'><Link className='navigation__main-link' to='/signup'>Регистрация</Link></li>
+                    <li className='navigation__item'><Link className='navigation__main-link navigation__main-link_colored' to='/signin'>Войти</Link></li>
+                  </ul>
                 :
-                <nav className='navigation__profile-links'>
+                <ul className='navigation__profile-links'>
                     <Link className='navigation__profile-link navigation__profile-link_weight' to='/movies'>Фильмы</Link>
-                    <Link className='navigation__profile-link' to='/saved-movies'>Сохранённые фильмы</Link>
+                    <Link className='navigation__profile-link navigation__profile-link_grow' to='/saved-movies'>Сохранённые фильмы</Link>
                     <Link className='navigation__profile-link navigation__profile-link_border' to='/profile'>
                         <img className='navigation__profile-link-icon' alt='Силуэт человека' src={logo}/>
                         Аккаунт
@@ -35,7 +35,7 @@ function Navigation(props) {
                         <button type='button' className='navigation__profile-button' onClick={openNavTab} />
                         <NavTab isOpen={navTabIsOpen} onClose={closeNavTab} />
                     </div>
-                </nav>
+                </ul>
             }
         </section>
     )

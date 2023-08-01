@@ -5,8 +5,8 @@ import movies from '../../utils/Movies';
 
 function MoviesCardList(props) {
     return (
-        <section className='movies-cardlist'>
-            <article className='movies-cardlist__container'>
+        <section className={`movies-cards ${props.isSavedMovies ? 'movies-cards_saved' : ''}`}>
+            <ul className='movies-cards__container'>
                 {
                     props.isSavedMovies 
                         ? movies.filter(movie => movie.isFavorite).map(movie => <MoviesCard 
@@ -14,7 +14,8 @@ function MoviesCardList(props) {
                             duration={movie.duration} 
                             isFavorite={movie.isFavorite} 
                             imageUrl={movie.imageUrl} 
-                            isSavedMovies={props.isSavedMovies} 
+                            isSavedMovies={props.isSavedMovies}
+                            key={movie.id} 
                         />)
                         : movies.map(movie => <MoviesCard 
                             title={movie.title} 
@@ -22,10 +23,11 @@ function MoviesCardList(props) {
                             isFavorite={movie.isFavorite} 
                             imageUrl={movie.imageUrl} 
                             isSavedMovies={props.isSavedMovies} 
+                            key={movie.id} 
                         />)
                 }
-            </article>
-            {props.isSavedMovies ? '' : <button className='movies-cardlist__button' type='button'>Ещё</button>}
+            </ul>
+            {props.isSavedMovies ? '' : <button className='movies-cards__button' type='button'>Ещё</button>}
         </section>
     )
 };

@@ -11,6 +11,7 @@
     cursor: pointer;
     position: relative;
     transition-duration: 300ms;
+    transition: visibility 0s linear 0s, opacity 300ms;
 }
 
 .filter-checkbox__switch-btn::after {
@@ -37,7 +38,7 @@
 .filter-checkbox{
     display: flex;
     border-bottom: 1px solid rgba(170, 170, 170, .2);
-    padding-bottom: 45px;
+    padding-bottom: 43px;
 }
 
 .filter-checkbox__text{
@@ -49,9 +50,19 @@
     padding-left: 14px;
 }
 
+.filter-checkbox__switch-btn:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 880px){
+    .filter-checkbox{
+        padding-bottom: 52px;
+    }
+}
+
 @media screen and (max-width: 440px){
     .filter-checkbox{
-        padding-bottom: 64px;
+        padding-bottom: 61px;
     }
 
     .filter-checkbox__text{

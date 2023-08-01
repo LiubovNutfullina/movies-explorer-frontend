@@ -12,72 +12,85 @@ const movies = [
       title: '33 слова о дизайне',
       duration: '3ч 35м',
       imageUrl: Film1,
-      isFavorite: false
+      isFavorite: false,
+      id: 1
     },
     {
       title: 'Список Шиндлера',
       duration: '2ч 34м',
       imageUrl: Film2,
-      isFavorite: true
+      isFavorite: true,
+      id: 2
     },
     {
       title: 'Замок',
       duration: '1ч 23м',
       imageUrl: Film3,
-      isFavorite: true
+      isFavorite: true,
+      id: 3
     },
     {
       title: '33 слова о дизайне',
       duration: '3ч 65м',
       imageUrl: Film4,
-      isFavorite: false
+      isFavorite: false,
+      id: 4
     },
     {
       title: 'Замок',
       duration: '6ч 05м',
       imageUrl: Film5,
-      isFavorite: true
+      isFavorite: true,
+      id: 5
     },
     {
       title: 'Переводчик',
       duration: '5ч 54м',
       imageUrl: Film6,
-      isFavorite: true
+      isFavorite: true,
+      id: 6
     },
     {
       title: 'Список Шиндлера',
       duration: '2ч 15м',
       imageUrl: Film7,
-      isFavorite: true},
+      isFavorite: true,
+      id: 7
+    },
     {
       title: 'Давайте жить дружно',
       duration: '4ч 42м',
       imageUrl: Film8,
-      isFavorite: true
+      isFavorite: true,
+      id: 8
     },
     {
       title: '33 слова о дизайне',
       duration: '3ч 35м',
       imageUrl: Film1,
-      isFavorite: false
+      isFavorite: false,
+      id: 9
     },
     {
       title: 'Я не хочу думать',
       duration: '2ч 34м',
       imageUrl: Film2,
-      isFavorite: true
+      isFavorite: true,
+      id: 10
     },
     {
-      title: 'Хз чо писать',
+      title: 'Давайте жить дружно',
       duration: '1ч 23м',
       imageUrl: Film3,
-      isFavorite: true
+      isFavorite: true,
+      id: 11
     },
     {
       title: '33 слова о дизайне',
       duration: '3ч 65м',
       imageUrl: Film4,
-      isFavorite: false
+      isFavorite: false,
+      id: 12
     }
   ];
 

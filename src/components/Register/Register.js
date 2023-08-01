@@ -7,8 +7,12 @@ function Register() {
     return(
         <div className='form'>
             <form className='form__content'>
-                <img className='form__logo' alt='Логотип' src={logo}/>
-                <h2 className='form__title'>Добро пожаловать!</h2>
+                <Link className='form__link-logo' to='/'>
+                    <img className='form__logo' 
+                    alt='Логотип' 
+                    src={logo}/>
+                </Link>
+                <h1 className='form__title'>Добро пожаловать!</h1>
                 <Input
                     placeholder='Имя'
                     type='text'

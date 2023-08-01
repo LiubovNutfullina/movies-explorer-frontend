@@ -7,8 +7,14 @@ function Login() {
     return(
         <div className='form'>
             <form className='form__content'>
-                <img className='form__logo' alt='Логотип' src={logo}/>
-                <h2 className='form__title'>Рады видеть!</h2>
+                <Link className='form__link-logo' to='/'>
+                    <img 
+                        className='form__logo' 
+                        alt='Логотип' 
+                        src={logo}
+                    />
+                </Link>
+                <h1 className='form__title'>Рады видеть!</h1>
                 <Input
                     placeholder='E-mail'
                     type='email'
@@ -25,7 +31,7 @@ function Login() {
                     min={'2'}
                     max={'40'}
                 />
-                <button type='submit' className='form__button-submit'>Войти</button>
+                <button type='submit' className='form__button-submit form__button-submit_signin'>Войти</button>
                 <div className='form__signup'>
                     <p className='form__signup-text'>Ещё не зарегистрированы?</p> 
                     <Link to='/signup' className='form__link'>

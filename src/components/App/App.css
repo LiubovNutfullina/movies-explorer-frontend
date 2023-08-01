@@ -1,0 +1,7 @@
+.content {
+    display: flex;
+    background-color: #202020;
+    color: white;
+    flex-direction: column;
+    margin: 0 auto;
+}

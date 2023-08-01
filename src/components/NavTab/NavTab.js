@@ -11,11 +11,12 @@ function NavTab(props) {
         <section className={`nav-tab ${isOpenNavTab}`}>
             <div className="nav-tab__container">
                 <button
+                    type='button'
                     className="nav-tab__close"
                     aria-label="Закрыть"
                     onClick={props.onClose}
                 />
-                <nav className="nav-tab__content">
+                <ul className="nav-tab__content">
                     <Link className="nav-tab__link" to='/' >Главная</Link>
                     <Link className="nav-tab__link" to='/movies'>Фильмы</Link>
                     <Link className="nav-tab__link" to='/saved-movies'>Сохранённые фильмы</Link>
@@ -25,7 +26,7 @@ function NavTab(props) {
                             Аккаунт
                         </Link>
                     </div>
-                </nav>
+                </ul>
             </div>
         </section>
     )

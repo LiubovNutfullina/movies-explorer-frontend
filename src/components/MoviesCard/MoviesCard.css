@@ -1,12 +1,13 @@
 .movies-card{
     background-color:  #222;
     transition: transform 0.25s;
+    list-style-type: none;
 }
 
 .movies-card__container{
     display: flex;
     justify-content: space-between;
-    padding: 14px;
+    padding: 12px 14px;
     gap: 26px;
 }
 
@@ -62,7 +63,7 @@
     transition: opacity .3s linear;
 }
 
-.movies-card__save-button_active{
+.movies-card__save-button-active{
     background-image: url(../../images/button\ active.svg);
     background-repeat: no-repeat;
     cursor: pointer;
@@ -84,7 +85,7 @@
     opacity: .8;
 }
 
-.movies-card__save-button_active:hover {
+.movies-card__save-button-active:hover {
     opacity: .5;
 }
 

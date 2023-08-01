@@ -4,7 +4,7 @@ import './Input.css';
 function Input(props) {
     return (
         <div className='input'>
-            <span className='input__placeholder'>{props.placeholder}</span>
+            <label className='input__placeholder'>{props.placeholder}</label>
             <input
                 type={props.type}
                 id={props.id}

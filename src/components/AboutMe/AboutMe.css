@@ -74,7 +74,7 @@
     color: gray;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 880px){
     .about-me{
         padding: 90px 50px;
     }

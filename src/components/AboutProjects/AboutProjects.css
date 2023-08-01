@@ -1,5 +1,5 @@
 .about-project{
-    padding: 110px 70px;
+    padding: 117px 70px;
 }
 
 .about-project__title{
@@ -7,14 +7,15 @@
     font-size: 22px;
     font-weight: 400;
     line-height: 16px;
+    letter-spacing: -0.88px;
     margin: 0;
     border-bottom: 1px solid white;
-    padding: 0 0 23px;
+    padding: 0 0 27px;
 }
 
 .about-project__container{
     display: flex;
-    gap: 40px;
+    gap: 48px;
     margin: 70px 0 110px;
 }
 
@@ -28,9 +29,10 @@
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: normal;
+    font-style: normal;
+    letter-spacing: -0.8px;
     margin: 0;
-    padding: 4px 0;
 }
 
 .about-project__paragraph{
@@ -39,7 +41,6 @@
     font-weight: 400;
     line-height: 20px;
     margin: 0;
-    padding: 2px 0;
 }
 
 .about-project__time-intervals{
@@ -56,9 +57,10 @@
     color: black;
     background-color: #3DDC84;
     white-space: nowrap;
-    max-height: 36px;
-    padding: 9px 14px;
-    text-align: center;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-project__period-two{
@@ -69,8 +71,10 @@
     margin: 0;
     background-color: #303030;
     text-align: center;
-    max-height: 36px;
-    padding: 9px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-project__stack{
@@ -83,13 +87,21 @@
     text-align: center;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 880px){
     .about-project{
-        padding: 70px 50px;
+        padding: 94px 50px;
     }
 
     .about-project__container{
         gap: 30px;
+        margin: 70px 0 93px;
+    }
+
+    .about-project__paragraph{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        font-style: normal;
     }
 
     .about-project__info{
@@ -101,12 +113,17 @@
     .about-project__container{
         flex-direction: column;
         margin: 60px 0 60px;
+        gap: 56px;
+    }
+
+    .about-project__info{
+        gap: 16px;
     }
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 440px){
     .about-project{
-        padding: 60px 18px;
+        padding: 70px 18px;
     }
 
     .about-project__container{
@@ -115,7 +132,7 @@
     }
 
     .about-project__title{
-        padding: 0 0 28px;
+        padding: 0 0 30px;
         font-size: 18px;
     }
 
@@ -125,19 +142,23 @@
 
     .about-project__paragraph{
         font-size: 11px;
+        line-height: 16px;
     }
 
     .about-project__period-one{
         font-size: 11px;
-        width: 80px;
+        width: 100px;
+        height: 35px;
     }
 
     .about-project__period-two{
         font-size: 11px;
+        height: 35px;
     }
 
     .about-project__stack{
         font-size: 11px;
+        line-height: normal;
         margin: 10px 0 0 0;
     }
 }

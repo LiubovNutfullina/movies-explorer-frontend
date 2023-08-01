@@ -13,11 +13,11 @@ function AboutMe() {
                     <h3 className='about-me__name'>Ahmed</h3>
                     <p className='about-me__subtitle'>Translater, 40let</p>
                     <p className='about-me__about'>Ахмед спас Джона от смерти, и теперь тот должен вернуть долг. Гай Ричи как никогда серьезен — и как всегда крут</p>
-                    <a className='about-me__link' href='https://github.com/LiubovNutfullina'>Github</a>
+                    <a className='about-me__link' href='https://github.com/LiubovNutfullina' target='blank'>Github</a>
                 </div>
                 <img 
                     className='about-me__avatar'
-                    alt='Здесь изображен аватар'
+                    alt='Здесь изображено мое фото'
                     src={photo}
                 />
             </div>

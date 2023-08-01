@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     padding: 0 70px;
-    position: relative;
 }
 
 .header_items-aligned-left{
@@ -13,6 +12,11 @@
 
 .header__logo{
     padding: 18px 0;
+    transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+.header__logo:hover {
+    opacity: 0.6;
 }
 
 @media screen and (max-width: 880px){
