@@ -9,9 +9,16 @@ import Portfolio from '../Portfolio/Potrfolio.js';
 import Footer from '../Footer/Footer.js';
 
 function Main() {
-        return (
+    
+    const [isLoggedIn, setIsLoggedIn] = React.useState(Boolean(localStorage.getItem("jwt")));
+
+    React.useEffect(() => {
+        setIsLoggedIn(Boolean(localStorage.getItem("jwt")));
+    },[]);
+
+    return (
         <div className='main'>
-            <Header isMainPage={true} />
+            <Header isLoggedIn={isLoggedIn} />
             <Promo />
             <AboutProjects />
             <Techs />

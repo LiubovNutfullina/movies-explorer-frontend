@@ -18,12 +18,8 @@ function Navigation(props) {
 
     return(
         <section className='navigation'>
-            {props.isMainPage 
-                ? <ul className='navigation__main-links'>
-                    <li className='navigation__item navigation__item_grow'><Link className='navigation__main-link' to='/signup'>Регистрация</Link></li>
-                    <li className='navigation__item'><Link className='navigation__main-link navigation__main-link_colored' to='/signin'>Войти</Link></li>
-                  </ul>
-                :
+            {props.isLoggedIn 
+                ? 
                 <ul className='navigation__profile-links'>
                     <Link className='navigation__profile-link navigation__profile-link_weight' to='/movies'>Фильмы</Link>
                     <Link className='navigation__profile-link navigation__profile-link_grow' to='/saved-movies'>Сохранённые фильмы</Link>
@@ -36,6 +32,12 @@ function Navigation(props) {
                         <NavTab isOpen={navTabIsOpen} onClose={closeNavTab} />
                     </div>
                 </ul>
+                :
+                <ul className='navigation__main-links'>
+                    <li className='navigation__item navigation__item_grow'><Link className='navigation__main-link' to='/signup'>Регистрация</Link></li>
+                    <li className='navigation__item'><Link className='navigation__main-link navigation__main-link_colored' to='/signin'>Войти</Link></li>
+                </ul>
+                
             }
         </section>
     )
