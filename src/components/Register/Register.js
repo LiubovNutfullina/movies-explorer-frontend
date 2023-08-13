@@ -1,8 +1,10 @@
 import './Register.css';
 import logo from '../../images/header_logo.svg';
 import Input from '../Input/Input.js';
+import { validateInput } from '../../utils/constants';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import * as auth from '../../utils/MainApi';
 
 function Register(props) {
     const [formValue, setFormValue] = React.useState({
@@ -19,6 +21,17 @@ function Register(props) {
             valid: false,
         },
     });
+    const navigate = useNavigate();
+
+    React.useEffect(() => {
+        if (localStorage.getItem('jwt')) {
+            auth.checkToken(localStorage.getItem('jwt'))
+                .then(() => {
+                    navigate('/movies', { replace: true });
+                })
+                .catch((err) => console.log(err));
+        }
+    }, []);
 
     const handleChange = (e) => {
         const {id, value} = e.target;
@@ -81,7 +94,7 @@ function Register(props) {
                     defaultValue=''
                     autocomplete='new-password'
                 />
-                <button type='submit' className='form__button-submit' disabled={!formValue.name.valid || !formValue.email.valid || !formValue.password.valid}>Зарегистрироваться</button>
+                <button type='submit' className='form__button-submit' disabled={!validateInput("name", formValue.name.value) || !validateInput("email", formValue.email.value) || (!formValue.name.valid || !formValue.email.valid || !formValue.password.valid)}>Зарегистрироваться</button>
                 <div className='form__signup'>
                     <p className='form__signup-text'>Уже зарегистрированы?</p> 
                     <Link to='/signin' className='form__link'>

@@ -107,15 +107,23 @@ function App() {
     }
     MainApi
       .register(formValue.name.value, formValue.email.value, formValue.password.value)
-              .then((res) => {
-                setOpenTooltip(!openTooltip);
-                setTooltipInfo(true);
-                navigate('/signin', {replace: true});
-              })
-              .catch((err) => {
-                setTooltipInfo(false);
-                console.log(err);
-              });
+        .then((res) => {
+          setOpenTooltip(!openTooltip);
+          setTooltipInfo(true);
+          MainApi.authorize(formValue.email.value, formValue.password.value)
+          .then((data) => {
+            if (data.token) {
+              localStorage.setItem('jwt', data.token);
+              handleLogin();
+              navigate('/movies', {replace: true});
+            }
+          }).catch((err) => {console.log(err)})
+        })
+        .catch((err) => {
+          setOpenTooltip(!openTooltip);
+          setTooltipInfo(false);
+          console.log(err);
+        });
 
   }
 

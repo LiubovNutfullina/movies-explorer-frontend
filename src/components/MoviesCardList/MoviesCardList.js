@@ -3,7 +3,7 @@ import React from 'react';
 import MoviesCard from '../MoviesCard/MoviesCard.js';
 
 function MoviesCardList(props) {
-    const initialArray = window.innerWidth > 880 ? 
+    const initialArray = props.isSavedMovies ? props.movies : window.innerWidth > 880 ? 
         props.movies.slice(0, 12) :
             window.innerWidth <= 880 && window.innerWidth > 440 ?
                 props.movies.slice(0, 8) :
@@ -21,12 +21,16 @@ function MoviesCardList(props) {
 
     window.addEventListener("resize", () => {
         setTimeout(() => {
-            const arr = window.innerWidth > 880 ? 
-            props.movies.slice(0, 12) :
-                window.innerWidth <= 880 && window.innerWidth > 440 ?
-                    props.movies.slice(0, 8) :
-                        props.movies.slice(0, 5);
-            setShownCards(arr);
+            if (props.isSavedMovies) {
+                setShownCards(props.movies)
+            } else {
+                const arr = window.innerWidth > 880 ? 
+                props.movies.slice(0, 12) :
+                    window.innerWidth <= 880 && window.innerWidth > 440 ?
+                        props.movies.slice(0, 8) :
+                            props.movies.slice(0, 5);
+                setShownCards(arr);
+            }
         }, 0);
     });
 

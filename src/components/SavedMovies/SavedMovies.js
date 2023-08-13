@@ -66,7 +66,7 @@ function SavedMovies() {
             if (!filteredMovies.length) {
                 setMovies([]);
             }
-        });
+        }).catch(res=>console.log(res));
     }
 
     return (

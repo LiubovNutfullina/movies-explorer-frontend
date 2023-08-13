@@ -16,7 +16,7 @@ function Movies(props) {
     const [movies, setMovies] = React.useState([]);
     const [checkboxChecked, setCheckboxChecked] = React.useState(false);
     const [searchInputValue, setSearchInputValue] = React.useState('');
-    const [errorText, setErrorText] = React.useState('Нет результатов');
+    const [errorText, setErrorText] = React.useState('');
 
 
     React.useState(() => {
@@ -44,7 +44,8 @@ function Movies(props) {
 
     const handleSearch = (value) => {
         if (!loadedMovies.length) {
-            loadMovies(value).catch(() => {
+            loadMovies(value).catch((err) => {
+                console.log(err)
                 setErrorText('Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз');
             });
         } else {
@@ -72,6 +73,9 @@ function Movies(props) {
                         (movie.nameRU.toUpperCase().includes(searchInputValue.toUpperCase())
                         || movie.nameEN.toUpperCase().includes(searchInputValue.toUpperCase())));
                 localStorage.setItem('movies', JSON.stringify(moviesToSet));
+                if (!moviesToSet.length) {
+                    setErrorText('Нет результатов');
+                }
                 setMovies(moviesToSet);
             }, 0)
         }
@@ -82,7 +86,7 @@ function Movies(props) {
             loadMovies(searchInputValue).then(() => {
                 localStorage.setItem('checkbox', !checkboxChecked);
                 setCheckboxChecked(!checkboxChecked);
-            });
+            }).catch((err)=>{console.log(err)});
         } else {
             localStorage.setItem('checkbox', !checkboxChecked);
                 setCheckboxChecked(!checkboxChecked);
@@ -96,7 +100,9 @@ function Movies(props) {
             }
         });
         return isFavorite ?
-            mainApi.deleteMovieCard(loadedSavedMovies.find(savedMovie => savedMovie.movieId === movie.id)._id) : mainApi.addNewSavedMovieCard(  
+            mainApi.deleteMovieCard(loadedSavedMovies.find(savedMovie => savedMovie.movieId === movie.id)._id)
+             .catch(res=>console.log(res))
+             : mainApi.addNewSavedMovieCard(  
                 movie.country,
                 movie.director,
                 movie.duration,
@@ -110,7 +116,7 @@ function Movies(props) {
                 movie.nameEN,
             ).then((value)=>{
                 setLoadedSavedMovies(loadedSavedMovies.concat([value]));
-            });
+            }).catch(res=>console.log(res));
     }
 
     return (

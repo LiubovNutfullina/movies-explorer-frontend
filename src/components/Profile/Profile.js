@@ -29,7 +29,8 @@ function Profile(props) {
             .then(() => {
                 setResponseMessage('Профиль отредактирован');
             })
-            .catch(() => {
+            .catch((err) => {
+                console.log(err)
                 setResponseMessage('Произошла ошибка');
             });
     }
