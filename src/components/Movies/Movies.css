@@ -4,4 +4,27 @@
     display: flex;
     flex-direction: column;
     min-width: 300px;
+    /* min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto; */
+}
+
+.movies__text-not-result {
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0;
+    padding: 100px;
+}
+
+@media screen and (max-width: 360px){
+    .movies__text-not-result {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 16px;
+        white-space: nowrap;
+    }
 }

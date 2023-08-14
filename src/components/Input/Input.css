@@ -3,10 +3,10 @@
     box-sizing: border-box;
     margin: 0;
     box-sizing: border-box;
-    padding-top: 22px;
+    padding-top: 4px;
 }
 
-.input__placeholder {
+.input__label {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     font-size: 10px;
     font-weight: 400;
@@ -28,4 +28,24 @@
     height: 17px;
     padding-bottom: 10px;
     outline: none;
+}
+
+.input__text_error {
+    color: #EE3465;
+}
+
+.input__error {
+    display: none;
+    overflow: hidden;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: normal;
+    font-style: normal;
+    color: #EE3465;
+    padding-top: 6px;
+}
+
+.input__error_active {
+    display: block;
 }

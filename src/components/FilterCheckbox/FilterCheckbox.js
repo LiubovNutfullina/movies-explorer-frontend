@@ -1,11 +1,11 @@
 import './FilterCheckbox.css';
 
-function FilterCheckbox() {
+function FilterCheckbox(props) {
     return (
-        <form className='filter-checkbox'>
-            <div className='filter-checkbox__switch-btn filter-checkbox__switch-on' />
+        <div className='filter-checkbox'>
+            <div className={`filter-checkbox__switch-btn ${props.checked ? 'filter-checkbox__switch-on': ''}`} onClick={props.onClick}></div>
             <span className='filter-checkbox__text'>Короткометражки</span>
-        </form>
+        </div>
     )
 };
 

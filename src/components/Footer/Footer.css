@@ -1,5 +1,9 @@
 .footer{
     padding: 80px 70px 20px;
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; */
 }
 
 .footer__title{
@@ -58,7 +62,7 @@
     opacity: .5;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 880px){
     .footer{
         padding: 80px 30px 20px;
     }

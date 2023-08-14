@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function Header(props) {
     return (
-        <header className={`header ${props.isMainPage ? '' : 'header_items-aligned-left'}`}>
+        <header className={`header ${props.isLoggedIn ? 'header_items-aligned-left' : ''}`}>
             <Link className='header__link' to='/'>
                 <img 
                     className='header__logo'
@@ -14,7 +14,7 @@ function Header(props) {
                     alt='Логотип' 
                 />
             </Link>
-            <Navigation isMainPage={props.isMainPage} />
+            <Navigation isLoggedIn={props.isLoggedIn} />
         </header>
     )
 }
