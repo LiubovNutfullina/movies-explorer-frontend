@@ -74,7 +74,7 @@ function Movies(props) {
                         || movie.nameEN.toUpperCase().includes(searchInputValue.toUpperCase())));
                 localStorage.setItem('movies', JSON.stringify(moviesToSet));
                 if (!moviesToSet.length) {
-                    setErrorText('Нет результатов');
+                    setErrorText('Ничего не найдено');
                 }
                 setMovies(moviesToSet);
             }, 0)

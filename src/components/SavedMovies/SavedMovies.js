@@ -16,7 +16,7 @@ function SavedMovies() {
     const [movies, setMovies] = React.useState([]);
     const [checkboxChecked, setCheckboxChecked] = React.useState(false);
     const [searchInputValue, setSearchInputValue] = React.useState('');
-    const [errorText, setErrorText] = React.useState('Нет результатов');
+    const [errorText, setErrorText] = React.useState('Ничего не найдено');
 
     const handleSearch = (value) => {
         setSearchInputValue(value);        
